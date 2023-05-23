@@ -14,22 +14,22 @@
         <div class="logo">PlasticPay</div>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="{% url 'home' %}">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
-          </li>
-
-          <li>
-            <a href="#">Community</a>
+            <a href="#about">About</a>
           </li>
 
           <li>
-            <a href="#">Ecosystem</a>
+            <a href="#community">Community</a>
           </li>
 
           <li>
-            <a href="#" class="btn btn-primary btn dark">Recyclers’ Portal</a>
+            <a href="#ecosystem">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="{% url 'recycler_portal' %}" class="btn btn-primary btn dark">Recyclers’ Portal</a>
           </li>
         </ul>
       </nav>

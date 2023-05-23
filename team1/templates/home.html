@@ -84,8 +84,8 @@ h2{
           with digital tokens that can be exchanged for discounts or cryptocurrencies. 
         </p>
   
-        <a href="#" class="btn-primary btn dark">Recyclers’ Portal</a>
-        <a href="#" class="btn btn-outline-info" style="color: black;">Support Recyclers</a>
+        <a href="{% url 'recycler_portal' %}" class="btn-primary btn dark">Recyclers’ Portal</a>
+        <a href="{% url 'support_recycler' %}" class="btn btn-outline-info" style="color: black;">Support Recyclers</a>
       </div>
   
       <div class="right">
@@ -93,7 +93,7 @@ h2{
       </div>
   </div>
 </div>
-<div class="wrapper">
+<div class="wrapper" id="about">
     <h1>About PlasticPay</h1>
   </div>
   <div class="wrapper">
@@ -117,7 +117,7 @@ h2{
       </div>
     </section>
   </div>
-  <div class="wrapper">
+  <div class="wrapper" id="community">
     <section class="testimonials-section">
       <div class="left">
         <h2 style="text-align: left;">Transparency and accountability in the recycling process</h2>
@@ -139,7 +139,7 @@ h2{
       </div>
     </section>
     <div class="wrapper">
-      <h1><a href="#" class="btn dark" style="text-decoration: none;">View Recycle Data</a></h1>
+      <h1><a href="{% url 'recycle_data' %}" class="btn btn-primary" style="text-decoration: none;">View Recycle Data</a></h1>
     </div>
   </div>
   <div class="wrapper">
@@ -151,15 +151,31 @@ h2{
         <div style="border-radius: 30px;" class="app-btn">
           <img src="{% static 'images/name1.png' %}" alt="" />
           <div>
-            <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
+            <h3>Emmanuel Effiong </h3>
+            <h5 class="company">Blockchain Engineer</h5>
           </div>
         </div>
         <div style="border-radius: 30px;" class="app-btn">
           <img src="{% static 'images/name1.png' %}" alt="" />
           <div>
             <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
+            <h5 class="company">Product Designer</h5>
+          </div>
+        </div>
+      </div>
+      <div class="app-buttons">
+        <div style="border-radius: 30px;" class="app-btn">
+          <img src="{% static 'images/mahmud.png' %}" alt="" />
+          <div>
+            <h3>Mahmoud Umar</h3>
+            <h5 class="company">FrontEnd Engineer</h5>
+          </div>
+        </div>
+        <div style="border-radius: 30px;" class="app-btn">
+          <img src="{% static 'images/name1.png' %}" alt="" />
+          <div>
+            <h3>Regina Owan</h3>
+            <h5 class="company">Technical Writer</h5>
           </div>
         </div>
       </div>
@@ -167,31 +183,15 @@ h2{
         <div style="border-radius: 30px;" class="app-btn">
           <img src="{% static 'images/name1.png' %}" alt="" />
           <div>
-            <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
+            <h3>Onyekachi K. A.</h3>
+            <h5 class="company">Technical Writer</h5>
           </div>
         </div>
         <div style="border-radius: 30px;" class="app-btn">
           <img src="{% static 'images/name1.png' %}" alt="" />
           <div>
-            <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
-          </div>
-        </div>
-      </div>
-      <div class="app-buttons">
-        <div style="border-radius: 30px;" class="app-btn">
-          <img src="{% static 'images/name1.png' %}" alt="" />
-          <div>
-            <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
-          </div>
-        </div>
-        <div style="border-radius: 30px;" class="app-btn">
-          <img src="{% static 'images/name1.png' %}" alt="" />
-          <div>
-            <h3>Ozor Awachie</h3>
-            <h5 class="company">CTO</h5>
+            <h3>Elonna</h3>
+            <h5 class="company">Technical Writer</h5>
           </div>
         </div>
       </div>
