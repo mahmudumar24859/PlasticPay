@@ -13,7 +13,7 @@ config = dotenv.dotenv_values(".env")
 
 w3 = Web3(Web3.HTTPProvider(config['httpProvider']))
 contract_address = config['plasticpay_address']
-contract_abi = ['plasticpay_abi']
+contract_abi = config['plasticpay_abi']
 
 # Load contract
 PlasticPay_contract = w3.eth.contract(address=contract_address, abi=contract_abi)
