@@ -39,7 +39,7 @@ def connect_wallet(request):
 # Get all items ever recycled by users
 def totalItemsRecycled(request):
     try:
-        result = contract.functions.recycled_items().call
+        result = PlasticPay_contract.functions.recycled_items().call
         return JsonResponse({'success': True, 'Total_items_recycled': result})
     except Exception as e:
         print(f"Error: {e}")
@@ -48,7 +48,7 @@ def totalItemsRecycled(request):
 # get total rewards recieved by user and current items recycled
 def user_reward(request):
     try:
-        result = contract.functions.myreward().call
+        result = PlasticPay_contract.functions.myreward().call
         return JsonResponse({'success': True, 'user_reward': result})
     except Exception as e:
         print(f"Error: {e}")
@@ -56,7 +56,7 @@ def user_reward(request):
 # get addres of admin and current value of exchange rate for recycling items
 def getExchangeRate(request):
     try:
-        result = contract.functions.getSummary().call
+        result = PlasticPay_contract.functions.getSummary().call
         return JsonResponse({'success': True, 'result': result})
     except Exception as e:
         print(f"Error: {e}")
@@ -64,7 +64,7 @@ def getExchangeRate(request):
 # get contract balance
 def getBalance(request):
     try:
-        result = contract.functions.getContractBalance().call
+        result = PlasticPay_contract.functions.getContractBalance().call
         return JsonResponse({'success': True, 'contract balance': result})
     except Exception as e:
         print(f"Error: {e}")
@@ -72,7 +72,7 @@ def getBalance(request):
 # redeem rewards. get Matic value for recycled items
 def recieve_payment(request):
     try:
-        result = contract.functions.redeemRewards().transact()
+        result = PlasticPay_contract.functions.redeemRewards().transact()
         receipt = web3.eth.get_transaction_receipt(result)
         return JsonResponse({'success': True, 'receipt': receipt})
     except Exception as e:
@@ -81,7 +81,7 @@ def recieve_payment(request):
 # recycle items
 def recycle_item(request, items):
     try:
-        result = contract.functions.recycleItems(items).transact()
+        result = PlasticPay_contract.functions.recycleItems(items).transact()
         receipt = web3.eth.get_transaction_receipt(result)
         return JsonResponse({'success': True, 'receipt': receipt})
     except Exception as e:
@@ -90,7 +90,7 @@ def recycle_item(request, items):
 # donate to plasticPay
 def donate(request, amount):
     try:
-        result = contract.functions.donatefunds(amount).transact()
+        result = PlasticPay_contract.functions.donatefunds(amount).transact()
         receipt = web3.eth.get_transaction_receipt(result)
         return JsonResponse({'success': True, 'receipt': receipt})
     except Exception as e:
