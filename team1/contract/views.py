@@ -36,6 +36,18 @@ def connect_wallet(request):
     except Exception as e:
         print(f"Error: {e}")
 
+
+# Display connected wallet address
+def get_connect_wallet():
+    # check if wallet is connected
+    if not w3.isConnected():
+        raise Exception("No wallet connected")
+    # get current selected metamask wallet
+    user_wallet = w3.eth.accounts
+    if not user_wallet:
+        raise Exception("No account found")
+    return user_wallet[0].lower()
+
 # Get all items ever recycled by users
 def totalItemsRecycled(request):
     try:
