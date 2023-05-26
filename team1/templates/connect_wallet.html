@@ -2,7 +2,7 @@
 <!-- Add a button to trigger MetaMask connection -->
 <button id="connectButton" onclick="connectMetaMask()">Connect Wallet</button>
 
-<form method="post" action="{% url 'connect_wallet' %}" id="connectForm">
+<form method="post" action="{% url 'connectWallet' %}" id="connectForm">
     {% csrf_token %}
     <input type="hidden" name="ethereum_address" id="ethereumAddressInput">
     <button type="submit" name="connectButton" style="display: none;"></button>
